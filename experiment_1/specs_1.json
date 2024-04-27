@@ -1,0 +1,24 @@
+{
+    "DataSource" : "path/to/dataset",
+    "TrainDataInfo" : "data_train.json",
+    "ValidDataInfo" : "data_valid.json",
+    "CNNInitDim" : 8,
+    "NumEpochs" : 500,
+    "LogFrequency" : 10,
+    "SnapshotFrequency" : 500,
+    "Optimizer" : "Adam",
+    "LearningRateSchedule" : [
+      {
+        "Type" : "Step",
+        "Initial" : 0.0001,
+        "Interval" : 500,
+        "Factor" : 0.5,
+        "MaxSteps" : 7
+      }],
+    "TrainBatchSize" : 32,
+    "NumFramesPerSeg" : 7,
+    "NumSampledFramesPerSeg" : 7,
+    "NumWorkers" : 4,
+    "Reproducibility" : true,
+    "RandomSeed" : 0
+  }
